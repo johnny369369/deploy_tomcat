@@ -1,0 +1,32 @@
+Dnspod:
+  conf:
+  - {dest: all, local: '', remote: class}
+  exclude_opts: ''
+  hosts: [192.168.20.105]
+  info: Dnspod
+  restart_cmd: restart
+  svn_path: svn://10.252.252.98:3890/HB_h5/hb_websocket
+b79_web_front:
+  conf:
+  - {dest: all, local: dnspod.py, remote: /web/b79_web_front/dnspod.py}
+  - {dest: all, local: requirements.txt, remote: /web/b79_web_front/requirements.txt}
+  exclude: ''
+  hosts: [192.168.20.105]
+  restart_cmd: /usr/bin/tomcat8b79webfront restart
+  svn_path: svn://192.168.20.110/svn_project_code/dnsapi_flask
+dnspod_api:
+  conf:
+  - {dest: all, local: menu.py, remote: /web/dnspod_api/menu.py}
+  - {dest: all, local: domain.txt, remote: /web/dnspod_api/domain.txt}
+  exclude: ''
+  hosts: [192.168.20.105]
+  restart_cmd: /usr/bin/tomcatdnspodapi restart
+  svn_path: svn://192.168.20.110/discuz/2018dnspod
+zip_test:
+  conf:
+  - {dest: all, local: menu.py, remote: /web/zip_test/menu.py}
+  - {dest: all, local: domain.txt, remote: /web/zip_test/domain.txt}
+  exclude: ''
+  hosts: [192.168.20.105]
+  restart_cmd: /usr/bin/tomcatziptest restart
+  svn_path: svn://192.168.20.110/zip_test

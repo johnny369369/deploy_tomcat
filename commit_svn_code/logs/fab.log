@@ -1,0 +1,359 @@
+Source path:... deployment.py
+Starting var:.. self = <__main__.Fab object at 0x7f4d7c2a7630>
+18:05:46.833412 call       215     def deploy_jdk(self):
+18:05:46.835500 line       216         if exists(self.c,'/opt/jdk1.8'):
+18:05:47.352113 line       219             software_list = os.listdir(f'{os.getcwd()}/software_dir/')
+New var:....... software_list = ['jdk1.8.tar.gz', 'tomcat-8.0.tar.gz', 'server.xml', 'apr.tar.gz', 'catalina.sh']
+18:05:47.352317 line       220             if not software_list:
+18:05:47.352472 line       223             for filename in software_list:
+New var:....... filename = 'jdk1.8.tar.gz'
+18:05:47.352540 line       224                 if filename.startswith('jdk1.8'):
+18:05:47.352617 line       225                    try:
+18:05:47.352667 line       226                        self.c.put(f'software_dir/{filename}', f'/opt/{filename}', preserve_mode=True)
+18:05:54.970824 line       231                        print(All_params.display('OK:Jdk上传到服务器成功>>>开始解压Jdk', 'green'))
+18:05:54.971107 line       232                        self.c.run(f'tar -xf /opt/{filename}')
+18:05:59.555287 line       223             for filename in software_list:
+Modified var:.. filename = 'tomcat-8.0.tar.gz'
+18:05:59.555541 line       224                 if filename.startswith('jdk1.8'):
+18:05:59.555635 line       223             for filename in software_list:
+Modified var:.. filename = 'server.xml'
+18:05:59.555689 line       224                 if filename.startswith('jdk1.8'):
+18:05:59.555761 line       223             for filename in software_list:
+Modified var:.. filename = 'apr.tar.gz'
+18:05:59.555810 line       224                 if filename.startswith('jdk1.8'):
+18:05:59.555879 line       223             for filename in software_list:
+Modified var:.. filename = 'catalina.sh'
+18:05:59.555974 line       224                 if filename.startswith('jdk1.8'):
+18:05:59.556045 line       223             for filename in software_list:
+18:05:59.556167 return     223             for filename in software_list:
+Return value:.. None
+Source path:... deployment.py
+Starting var:.. self = <__main__.Fab object at 0x7faeaf203630>
+18:50:37.102054 call       215     def deploy_jdk(self):
+18:50:37.103018 line       216         if exists(self.c,'/opt/jdk1.8'):
+18:50:37.306889 line       219             software_list = os.listdir(f'{os.getcwd()}/software_dir/')
+New var:....... software_list = ['jdk1.8.tar.gz', 'tomcat-8.0.tar.gz', 'server.xml', 'apr.tar.gz', 'catalina.sh']
+18:50:37.307407 line       220             if not software_list:
+18:50:37.307658 line       223             for filename in software_list:
+New var:....... filename = 'jdk1.8.tar.gz'
+18:50:37.307808 line       224                 if filename.startswith('jdk1.8'):
+18:50:37.308164 line       225                    try:
+18:50:37.308349 line       226                        self.c.put(f'software_dir/{filename}', f'/opt/{filename}', preserve_mode=True)
+18:50:46.671638 line       231                        print(All_params.display('OK:Jdk上传到服务器成功>>>开始解压Jdk', 'green'))
+18:50:46.671854 line       232                        self.c.run(f'tar -xf /opt/{filename}')
+18:50:50.624226 line       223             for filename in software_list:
+Modified var:.. filename = 'tomcat-8.0.tar.gz'
+18:50:50.624404 line       224                 if filename.startswith('jdk1.8'):
+18:50:50.624560 line       223             for filename in software_list:
+Modified var:.. filename = 'server.xml'
+18:50:50.624694 line       224                 if filename.startswith('jdk1.8'):
+18:50:50.624814 line       223             for filename in software_list:
+Modified var:.. filename = 'apr.tar.gz'
+18:50:50.624990 line       224                 if filename.startswith('jdk1.8'):
+18:50:50.625141 line       223             for filename in software_list:
+Modified var:.. filename = 'catalina.sh'
+18:50:50.625326 line       224                 if filename.startswith('jdk1.8'):
+18:50:50.625442 line       223             for filename in software_list:
+18:50:50.625528 return     223             for filename in software_list:
+Return value:.. None
+Source path:... deployment.py
+Starting var:.. self = <__main__.Fab object at 0x7f2fe1de4630>
+18:51:29.202041 call       215     def deploy_jdk(self):
+18:51:29.202516 line       216         if exists(self.c,'/opt/jdk1.8.tar.gz'):
+18:51:29.347851 line       217            print(All_params.display('jdk1.8已经存在不用推送', 'yellow'))
+18:51:29.348013 return     217            print(All_params.display('jdk1.8已经存在不用推送', 'yellow'))
+Return value:.. None
+Source path:... deployment.py
+Starting var:.. self = <__main__.Fab object at 0x7fe80a81d630>
+18:51:35.548210 call       215     def deploy_jdk(self):
+18:51:35.548966 line       216         if exists(self.c,'/opt/jdk1.8*'):
+18:51:35.741006 line       217            print(All_params.display('jdk1.8已经存在不用推送', 'yellow'))
+18:51:35.741173 return     217            print(All_params.display('jdk1.8已经存在不用推送', 'yellow'))
+Return value:.. None
+Source path:... deployment.py
+Starting var:.. self = <__main__.Fab object at 0x7f1b42af7630>
+18:51:37.146160 call       215     def deploy_jdk(self):
+18:51:37.146699 line       216         if exists(self.c,'/opt/jdk1.8*'):
+18:51:37.279671 line       217            print(All_params.display('jdk1.8已经存在不用推送', 'yellow'))
+18:51:37.279832 return     217            print(All_params.display('jdk1.8已经存在不用推送', 'yellow'))
+Return value:.. None
+Source path:... deployment.py
+Starting var:.. self = <__main__.Fab object at 0x7f8139985630>
+18:54:30.897009 call       215     def deploy_jdk(self):
+18:54:30.897825 line       216         if exists(self.c,'/opt/jdk1.8*'):
+18:54:31.081268 line       217            print(All_params.display('jdk1.8已经存在不用推送', 'yellow'))
+18:54:31.082010 return     217            print(All_params.display('jdk1.8已经存在不用推送', 'yellow'))
+Return value:.. None
+Source path:... deployment.py
+Starting var:.. self = <__main__.Fab object at 0x7fd4276aa630>
+19:31:06.307128 call       215     def deploy_jdk(self):
+19:31:06.307685 line       216         if exists(self.c,'/opt/jdk1.8*') or exists(self.c,'/opt/jdk1.9*'):
+19:31:06.605294 line       219             software_list = os.listdir(f'{os.getcwd()}/software_dir/')
+New var:....... software_list = ['jdk1.8.tar.gz', 'tomcat-8.0.tar.gz', 'server.xml', 'apr.tar.gz', 'catalina.sh']
+19:31:06.605503 line       220             if not software_list:
+19:31:06.605608 line       223             for filename in software_list:
+New var:....... filename = 'jdk1.8.tar.gz'
+19:31:06.605716 line       224                 if filename.startswith('jdk1.8'):
+19:31:06.605799 line       225                    try:
+19:31:06.605850 line       226                        self.c.put(f'software_dir/{filename}', f'/opt/{filename}', preserve_mode=True)
+19:31:14.459733 line       231                        print(All_params.display('OK:Jdk上传到服务器成功>>>开始解压Jdk', 'green'))
+19:31:14.459961 line       232                        self.c.run(f'tar -xf /opt/{filename}')
+19:31:19.391452 line       233                        self.c.run(f'rm -f /opt{filename}')
+19:31:19.448889 line       223             for filename in software_list:
+Modified var:.. filename = 'tomcat-8.0.tar.gz'
+19:31:19.449169 line       224                 if filename.startswith('jdk1.8'):
+19:31:19.449262 line       223             for filename in software_list:
+Modified var:.. filename = 'server.xml'
+19:31:19.449318 line       224                 if filename.startswith('jdk1.8'):
+19:31:19.449394 line       223             for filename in software_list:
+Modified var:.. filename = 'apr.tar.gz'
+19:31:19.449446 line       224                 if filename.startswith('jdk1.8'):
+19:31:19.449517 line       223             for filename in software_list:
+Modified var:.. filename = 'catalina.sh'
+19:31:19.449599 line       224                 if filename.startswith('jdk1.8'):
+19:31:19.449675 line       223             for filename in software_list:
+19:31:19.449724 return     223             for filename in software_list:
+Return value:.. None
+Source path:... deployment.py
+Starting var:.. self = <__main__.Fab object at 0x7fea7d91f630>
+19:32:27.862822 call       215     def deploy_jdk(self):
+19:32:27.863308 line       216         if exists(self.c,'/opt/jdk1.8*') or exists(self.c,'/opt/jdk1.9*'):
+19:32:28.168584 line       219             software_list = os.listdir(f'{os.getcwd()}/software_dir/')
+New var:....... software_list = ['jdk1.8.tar.gz', 'tomcat-8.0.tar.gz', 'server.xml', 'apr.tar.gz', 'catalina.sh']
+19:32:28.168873 line       220             if not software_list:
+19:32:28.169022 line       223             for filename in software_list:
+New var:....... filename = 'jdk1.8.tar.gz'
+19:32:28.169089 line       224                 if filename.startswith('jdk1.8'):
+19:32:28.169259 line       225                    try:
+19:32:28.169315 line       226                        self.c.put(f'software_dir/{filename}', f'/opt/{filename}', preserve_mode=True)
+19:32:36.735040 line       227                        print(All_params.display('OK:Jdk上传到服务器成功>>>开始解压Jdk', 'green'))
+19:32:36.735332 line       228                        self.c.run(f'tar -xf /opt/{filename}')
+19:32:42.498861 line       229                        self.c.run(f'rm -f /opt{filename}')
+19:32:42.618976 line       223             for filename in software_list:
+Modified var:.. filename = 'tomcat-8.0.tar.gz'
+19:32:42.619225 line       224                 if filename.startswith('jdk1.8'):
+19:32:42.619329 line       223             for filename in software_list:
+Modified var:.. filename = 'server.xml'
+19:32:42.619386 line       224                 if filename.startswith('jdk1.8'):
+19:32:42.619522 line       223             for filename in software_list:
+Modified var:.. filename = 'apr.tar.gz'
+19:32:42.619585 line       224                 if filename.startswith('jdk1.8'):
+19:32:42.619658 line       223             for filename in software_list:
+Modified var:.. filename = 'catalina.sh'
+19:32:42.619707 line       224                 if filename.startswith('jdk1.8'):
+19:32:42.619776 line       223             for filename in software_list:
+19:32:42.619826 return     223             for filename in software_list:
+Return value:.. None
+Source path:... deployment.py
+Starting var:.. self = <__main__.Fab object at 0x7f84c96ef630>
+19:33:51.898899 call       215     def deploy_jdk(self):
+19:33:51.899454 line       216         if exists(self.c,'/opt/jdk1.8*') or exists(self.c,'/opt/jdk1.9*'):
+19:33:52.132215 line       217            print(All_params.display('jdk1.8已经存在不用推送', 'yellow'))
+19:33:52.132385 return     217            print(All_params.display('jdk1.8已经存在不用推送', 'yellow'))
+Return value:.. None
+Source path:... deployment.py
+Starting var:.. self = <__main__.Fab object at 0x7f8e7a7eb630>
+19:34:01.553087 call       215     def deploy_jdk(self):
+19:34:01.553565 line       216         if exists(self.c,'/opt/jdk1.8*') or exists(self.c,'/opt/jdk1.9*'):
+19:34:01.792891 line       219             software_list = os.listdir(f'{os.getcwd()}/software_dir/')
+New var:....... software_list = ['jdk1.8.tar.gz', 'tomcat-8.0.tar.gz', 'server.xml', 'apr.tar.gz', 'catalina.sh']
+19:34:01.793053 line       220             if not software_list:
+19:34:01.793146 line       223             for filename in software_list:
+New var:....... filename = 'jdk1.8.tar.gz'
+19:34:01.793197 line       224                 if filename.startswith('jdk1.8'):
+19:34:01.793372 line       225                    try:
+19:34:01.793430 line       226                        self.c.put(f'software_dir/{filename}', f'/opt/{filename}', preserve_mode=True)
+19:34:09.847217 line       227                        print(All_params.display('OK:Jdk上传到服务器成功>>>开始解压Jdk', 'green'))
+19:34:09.847430 line       228                        self.c.run(f'tar -xf /opt/{filename}')
+19:34:15.232976 line       229                        self.c.run(f'rm -f /opt{filename}')
+19:34:15.292433 line       223             for filename in software_list:
+Modified var:.. filename = 'tomcat-8.0.tar.gz'
+19:34:15.292592 line       224                 if filename.startswith('jdk1.8'):
+19:34:15.292704 line       223             for filename in software_list:
+Modified var:.. filename = 'server.xml'
+19:34:15.292762 line       224                 if filename.startswith('jdk1.8'):
+19:34:15.292837 line       223             for filename in software_list:
+Modified var:.. filename = 'apr.tar.gz'
+19:34:15.292888 line       224                 if filename.startswith('jdk1.8'):
+19:34:15.293057 line       223             for filename in software_list:
+Modified var:.. filename = 'catalina.sh'
+19:34:15.293118 line       224                 if filename.startswith('jdk1.8'):
+19:34:15.293196 line       223             for filename in software_list:
+19:34:15.293246 return     223             for filename in software_list:
+Return value:.. None
+Source path:... deployment.py
+Starting var:.. self = <__main__.Fab object at 0x7fba7fef1588>
+22:51:21.926976 call       215     def deploy_jdk(self):
+22:51:21.927629 line       216         if exists(self.c,'/opt/jdk1.8*') or exists(self.c,'/opt/jdk1.9*'):
+22:51:22.159607 line       219             software_list = os.listdir(f'{os.getcwd()}/software_dir/')
+New var:....... software_list = ['jdk1.8.tar.gz', 'tomcat-8.0.tar.gz', 'server.xml', 'apr.tar.gz', 'catalina.sh']
+22:51:22.159844 line       220             if not software_list:
+22:51:22.159980 line       223             for filename in software_list:
+New var:....... filename = 'jdk1.8.tar.gz'
+22:51:22.160035 line       224                 if filename.startswith('jdk1.8'):
+22:51:22.160109 line       225                    try:
+22:51:22.160159 line       226                        self.c.put(f'software_dir/{filename}', f'/opt/{filename}', preserve_mode=True)
+22:51:30.092804 line       231                        print(All_params.display('OK:Jdk上传到服务器成功>>>开始解压Jdk', 'green'))
+22:51:30.093056 line       232                        self.c.run(f'tar -xf /opt/{filename}')
+22:51:34.986637 line       223             for filename in software_list:
+Modified var:.. filename = 'tomcat-8.0.tar.gz'
+22:51:34.986980 line       224                 if filename.startswith('jdk1.8'):
+22:51:34.987274 line       223             for filename in software_list:
+Modified var:.. filename = 'server.xml'
+22:51:34.987386 line       224                 if filename.startswith('jdk1.8'):
+22:51:34.987520 line       223             for filename in software_list:
+Modified var:.. filename = 'apr.tar.gz'
+22:51:34.987612 line       224                 if filename.startswith('jdk1.8'):
+22:51:34.987772 line       223             for filename in software_list:
+Modified var:.. filename = 'catalina.sh'
+22:51:34.987869 line       224                 if filename.startswith('jdk1.8'):
+22:51:34.987992 line       223             for filename in software_list:
+22:51:34.988080 return     223             for filename in software_list:
+Return value:.. None
+Source path:... deployment.py
+Starting var:.. self = <__main__.Fab object at 0x7fec0a3ac5f8>
+22:53:10.054789 call       215     def deploy_jdk(self):
+22:53:10.056668 line       216         if exists(self.c,'/opt/jdk1.8*') or exists(self.c,'/opt/jdk1.9*'):
+22:53:10.264420 line       219             software_list = os.listdir(f'{os.getcwd()}/software_dir/')
+New var:....... software_list = ['jdk1.8.tar.gz', 'tomcat-8.0.tar.gz', 'server.xml', 'apr.tar.gz', 'catalina.sh']
+22:53:10.264658 line       220             if not software_list:
+22:53:10.264747 line       223             for filename in software_list:
+New var:....... filename = 'jdk1.8.tar.gz'
+22:53:10.264800 line       224                 if filename.startswith('jdk1.8'):
+22:53:10.264872 line       225                    try:
+22:53:10.264921 line       226                        self.c.put(f'software_dir/{filename}', f'/opt/{filename}', preserve_mode=True)
+22:53:18.048871 line       231                        print(All_params.display('OK:Jdk上传到服务器成功>>>开始解压Jdk', 'green'))
+22:53:18.049093 line       232                        self.c.run(f'tar -xf /opt/{filename} -C /opt/')
+22:53:23.964988 line       223             for filename in software_list:
+Modified var:.. filename = 'tomcat-8.0.tar.gz'
+22:53:23.965143 line       224                 if filename.startswith('jdk1.8'):
+22:53:23.965244 line       223             for filename in software_list:
+Modified var:.. filename = 'server.xml'
+22:53:23.965314 line       224                 if filename.startswith('jdk1.8'):
+22:53:23.965565 line       223             for filename in software_list:
+Modified var:.. filename = 'apr.tar.gz'
+22:53:23.965639 line       224                 if filename.startswith('jdk1.8'):
+22:53:23.965721 line       223             for filename in software_list:
+Modified var:.. filename = 'catalina.sh'
+22:53:23.965786 line       224                 if filename.startswith('jdk1.8'):
+22:53:23.965854 line       223             for filename in software_list:
+22:53:23.965903 return     223             for filename in software_list:
+Return value:.. None
+Source path:... deployment.py
+Starting var:.. self = <__main__.Fab object at 0x7f77f67685f8>
+08:18:13.667213 call       215     def deploy_jdk(self):
+08:18:13.668341 line       216         if exists(self.c,'/opt/jdk1.8*') or exists(self.c,'/opt/jdk1.9*'):
+08:18:13.920946 line       219             software_list = os.listdir(f'{os.getcwd()}/software_dir/')
+New var:....... software_list = ['jdk1.8.tar.gz', 'tomcat-8.0.tar.gz', 'server.xml', 'apr.tar.gz', 'catalina.sh']
+08:18:13.921330 line       220             if not software_list:
+08:18:13.921432 line       223             for filename in software_list:
+New var:....... filename = 'jdk1.8.tar.gz'
+08:18:13.921514 line       224                 if filename.startswith('jdk1.8'):
+08:18:13.921591 line       225                    try:
+08:18:13.921642 line       226                        self.c.put(f'software_dir/{filename}', f'/opt/{filename}', preserve_mode=True)
+08:18:22.219878 line       231                        print(All_params.display('OK:Jdk上传到服务器成功>>>开始解压Jdk', 'green'))
+08:18:22.220037 line       232                        self.c.run(f'tar -xf /opt/{filename} -C /opt/')
+08:18:29.304206 line       233                        print(All_params.display('OK:jdk解压成功'))
+08:18:29.304901 line       223             for filename in software_list:
+Modified var:.. filename = 'tomcat-8.0.tar.gz'
+08:18:29.304977 line       224                 if filename.startswith('jdk1.8'):
+08:18:29.305074 line       223             for filename in software_list:
+Modified var:.. filename = 'server.xml'
+08:18:29.305131 line       224                 if filename.startswith('jdk1.8'):
+08:18:29.305213 line       223             for filename in software_list:
+Modified var:.. filename = 'apr.tar.gz'
+08:18:29.305261 line       224                 if filename.startswith('jdk1.8'):
+08:18:29.305335 line       223             for filename in software_list:
+Modified var:.. filename = 'catalina.sh'
+08:18:29.305386 line       224                 if filename.startswith('jdk1.8'):
+08:18:29.305453 line       223             for filename in software_list:
+08:18:29.305500 return     223             for filename in software_list:
+Return value:.. None
+Source path:... deployment.py
+Starting var:.. self = <__main__.Fab object at 0x7fe7cfa9e630>
+08:20:33.094306 call       215     def deploy_jdk(self):
+08:20:33.095646 line       216         if exists(self.c,'/opt/jdk1.8*') or exists(self.c,'/opt/jdk1.9*'):
+08:20:33.306138 line       219             software_list = os.listdir(f'{os.getcwd()}/software_dir/')
+New var:....... software_list = ['jdk1.8.tar.gz', 'tomcat-8.0.tar.gz', 'server.xml', 'apr.tar.gz', 'catalina.sh']
+08:20:33.306300 line       220             if not software_list:
+08:20:33.306391 line       223             for filename in software_list:
+New var:....... filename = 'jdk1.8.tar.gz'
+08:20:33.306443 line       224                 if filename.startswith('jdk1.8'):
+08:20:33.306515 line       225                    try:
+08:20:33.306564 line       226                        self.c.put(f'software_dir/{filename}', f'/opt/{filename}', preserve_mode=True)
+08:20:40.909133 line       231                        print(All_params.display('OK:Jdk上传到服务器成功>>>开始解压Jdk', 'green'))
+08:20:40.909327 line       232                        self.c.run(f'tar -xf /opt/{filename} -C /opt/')
+08:20:46.320150 line       233                        print(All_params.display('OK:jdk解压成功','green'))
+08:20:46.320548 line       234                        self.c.run(f'rm -f /opt/{filename}')
+08:20:46.391728 line       223             for filename in software_list:
+Modified var:.. filename = 'tomcat-8.0.tar.gz'
+08:20:46.391934 line       224                 if filename.startswith('jdk1.8'):
+08:20:46.392034 line       223             for filename in software_list:
+Modified var:.. filename = 'server.xml'
+08:20:46.392090 line       224                 if filename.startswith('jdk1.8'):
+08:20:46.392163 line       223             for filename in software_list:
+Modified var:.. filename = 'apr.tar.gz'
+08:20:46.392214 line       224                 if filename.startswith('jdk1.8'):
+08:20:46.392284 line       223             for filename in software_list:
+Modified var:.. filename = 'catalina.sh'
+08:20:46.392370 line       224                 if filename.startswith('jdk1.8'):
+08:20:46.392439 line       223             for filename in software_list:
+08:20:46.392510 return     223             for filename in software_list:
+Return value:.. None
+Source path:... deployment.py
+Starting var:.. self = <__main__.Fab object at 0x7f6bcebeecf8>
+10:56:16.031452 call       237     def deploy_tomcat(self):
+10:56:16.032151 line       238         software_list = os.listdir(f'{os.getcwd()}/software_dir/')
+New var:....... software_list = ['jdk1.8.tar.gz', 'tomcat-8.0.tar.gz', 'server.xml', 'apr.tar.gz', 'catalina.sh']
+10:56:16.032223 line       239         if not software_list:
+10:56:16.032298 line       242         for filename in software_list:
+New var:....... filename = 'jdk1.8.tar.gz'
+10:56:16.032346 line       243             if filename.startswith('tomcat-8.0') or filename.startswith('tomcat-8.5'):
+10:56:16.032425 line       242         for filename in software_list:
+Modified var:.. filename = 'tomcat-8.0.tar.gz'
+10:56:16.032473 line       243             if filename.startswith('tomcat-8.0') or filename.startswith('tomcat-8.5'):
+10:56:16.032539 line       244                 try:
+10:56:16.032586 line       245                    self.c.put('software_dir/' + filename,f'/opt/{filename}')
+10:56:16.573312 line       250                     print(All_params.display('OK:Jdk-Tomcat上传到服务器成功','green'))
+10:56:16.573527 line       251                     print(All_params.display('>>>>开始解压Jdk和Tomcat','yellow'))
+10:56:16.573610 line       252                     self.c.run(f'tar -xf /opt/{filename} -C /opt/')
+10:56:16.686477 line       254                     self.c.run(f'rm -f /opt/{filename}')
+10:56:16.741306 line       255                     break
+10:56:16.741460 line       256         print(All_params.display('>>>>开始配置Tomcat','yellow'))
+10:56:16.741547 line       257         Tomcat_port = All_params.check_input('Tomcat主端口号')
+New var:....... Tomcat_port = '9090'
+10:56:19.230884 line       258         if self.tomcat_version == '8.5':
+10:56:19.231087 line       261             self.c.run(f'mv /opt/{filename} /opt/tomcat-{self.tomcat_version}_{self.project_name}_{Tomcat_port}').lower()
+10:56:19.281138 exception  261             self.c.run(f'mv /opt/{filename} /opt/tomcat-{self.tomcat_version}_{self.project_name}_{Tomcat_port}').lower()
+invoke.exceptions.UnexpectedExit: Encountered a ...
+Stdout: already printed
+
+Stderr: already printed
+Call ended by exception
+Source path:... deployment.py
+Starting var:.. self = <__main__.Fab object at 0x7f6586db5cf8>
+10:57:49.373242 call       237     def deploy_tomcat(self):
+10:57:49.373703 line       238         software_list = os.listdir(f'{os.getcwd()}/software_dir/')
+New var:....... software_list = ['jdk1.8.tar.gz', 'tomcat-8.0.tar.gz', 'server.xml', 'apr.tar.gz', 'catalina.sh']
+10:57:49.373788 line       239         if not software_list:
+10:57:49.373887 line       242         for filename in software_list:
+New var:....... filename = 'jdk1.8.tar.gz'
+10:57:49.373939 line       243             if filename.startswith('tomcat-8.0') or filename.startswith('tomcat-8.5'):
+10:57:49.374013 line       242         for filename in software_list:
+Modified var:.. filename = 'tomcat-8.0.tar.gz'
+10:57:49.374062 line       243             if filename.startswith('tomcat-8.0') or filename.startswith('tomcat-8.5'):
+10:57:49.374183 line       244                 try:
+10:57:49.374236 line       245                    self.c.put('software_dir/' + filename,f'/opt/{filename}')
+10:57:49.980215 line       250                     print(All_params.display('OK:Jdk-Tomcat上传到服务器成功','green'))
+10:57:49.980371 line       251                     print(All_params.display('>>>>开始解压Jdk和Tomcat','yellow'))
+10:57:49.980461 line       252                     self.c.run(f'tar -xf /opt/{filename} -C /opt/')
+10:57:50.091931 line       254                     self.c.run(f'rm -f /opt/{filename}')
+10:57:50.158049 line       255                     break
+10:57:50.158254 line       256         print(All_params.display('>>>>开始配置Tomcat','yellow'))
+10:57:50.158686 line       257         Tomcat_port = All_params.check_input('Tomcat主端口号')
+New var:....... Tomcat_port = '9090'
+10:57:53.768436 line       258         if self.tomcat_version == '8.5':
+10:57:53.768666 line       261             self.c.run(f'mv /opt/tomcat-8.0 /opt/tomcat-{self.tomcat_version}_{self.project_name}_{Tomcat_port}').lower()
+10:57:53.793407 exception  261             self.c.run(f'mv /opt/tomcat-8.0 /opt/tomcat-{self.tomcat_version}_{self.project_name}_{Tomcat_port}').lower()
+AttributeError: 'Result' object has no attribute 'lower'
+Call ended by exception

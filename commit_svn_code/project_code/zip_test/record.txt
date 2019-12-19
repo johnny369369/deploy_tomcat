@@ -1,0 +1,4 @@
+testbbb.com  @    CNAME  默认  bbb.com
+testbbb.com  www    CNAME  默认  bbb2.com
+testccc.com  @   CNAME  默认  ccc.com
+testccc.com  www  CNAME  默认  ccc2.com
