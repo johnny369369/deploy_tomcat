@@ -5,22 +5,22 @@ from Dnspod import Procedure
 
 
 product = int(input('\t\t\033[4mDndpod账号\033[0m\n\n'
-               '\t\033[34m1\033[0m\tB79市场部账号\n'
-               '\t\033[34m2\033[0m\tB79产品账号\n'
-               '\t\033[34m3\033[0m\tNWF账号\n\n'
+               '\t\033[34m1\033[0m\t市场部账号\n'
+               '\t\033[34m2\033[0m\t产品账号\n'
+               '\t\033[34m3\033[0m\t账号\n\n'
               '请输入本次要操作的账号：'))
 #Token and CNAME_Record init
 if product == 1:
     #B79市场部
-    Login_Token = '69449,16e3ee1cdcebe4e35df337cd497516f1'
+    Login_Token = 'your key_api'
 elif product == 2:
     #B79产品
-    Login_Token = '69573,d1b29ec7f5f1e544b6b6ea0a2a0a0a3f'
+    Login_Token = 'your key_api'
 elif product == 3:
     #NWF:E03/E04
-    Login_Token = '69572,79b1ac75539e5683cb01f391cb844e91'
+    Login_Token = 'your key_api'
 elif product == 4:
-    Login_Token = '71226,e401aa9005d303d1af32b37dce0eb5d8'    
+    Login_Token = 'your key_api    
 else:
     print('输入错误，请重新输入.')
     sys.exit(0)
