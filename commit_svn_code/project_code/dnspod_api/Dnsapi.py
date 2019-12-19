@@ -5,41 +5,41 @@ import requests
 from my_logger import mylogger
 
 '''
-Global_Var   - Í¨ÓÃ±äÁ¿
+Global_Var   - é€šç”¨å˜é‡
 
 '''
 
 
 
 class Global_Var:
-    '''Í¨ÓÃ±äÁ¿'''
+    '''é€šç”¨å˜é‡'''
     def __init__(self,Login_Token):
         self.Login_Token = Login_Token
         self.Format = 'json'
 
-        #self.Batch_Add_Domain_URL = 'https://dnsapi.cn/Batch.Record.Create'  #ÅúÁ¿Ìí¼ÓÓòÃû
-        #self.Batch_Add_Record_URL = 'https://dnsapi.cn/Batch.Record.Create'  #ÅúÁ¿Ìí¼Ó¼ÇÂ¼
-        #self.Alter_Record_URL = 'https://dnsapi.cn/Batch.Record.Modify'     #ÅúÁ¿ĞŞ¸Ä¼ÇÂ¼
+        #self.Batch_Add_Domain_URL = 'https://dnsapi.cn/Batch.Record.Create'  #æ‰¹é‡æ·»åŠ åŸŸå
+        #self.Batch_Add_Record_URL = 'https://dnsapi.cn/Batch.Record.Create'  #æ‰¹é‡æ·»åŠ è®°å½•
+        #self.Alter_Record_URL = 'https://dnsapi.cn/Batch.Record.Modify'     #æ‰¹é‡ä¿®æ”¹è®°å½•
 
-        self.Add_Domain_URL = 'https://dnsapi.cn/Domain.Create'             #Ìí¼ÓÓòÃû
-        self.Add_Record_URL = 'https://dnsapi.cn/Record.Create'             #Ìí¼Ó¼ÇÂ¼
-        #self.Alter_Record_URL = 'https://dnsapi.cn/Record.Modify'          #ĞŞ¸Ä¼ÇÂ¼
-        #self.Get_Record_URL = 'https://dnsapi.cn/Record.List'              #»ñÈ¡¼ÇÂ¼ÁĞ±í
-        #self.Del_Domain_URL = 'https://dnsapi.cn/Domain.Remove'            #É¾³ıÓòÃû
-        #self.Del_Record_URL = 'https://dnsapi.cn/Record.Remove'            #É¾³ı¼ÇÂ¼
-        #self.Get_Domain_List_URL = 'https://dnsapi.cn/Domain.List'         #»ñÈ¡ÓòÃûÁĞ±í
+        self.Add_Domain_URL = 'https://dnsapi.cn/Domain.Create'             #æ·»åŠ åŸŸå
+        self.Add_Record_URL = 'https://dnsapi.cn/Record.Create'             #æ·»åŠ è®°å½•
+        #self.Alter_Record_URL = 'https://dnsapi.cn/Record.Modify'          #ä¿®æ”¹è®°å½•
+        #self.Get_Record_URL = 'https://dnsapi.cn/Record.List'              #è·å–è®°å½•åˆ—è¡¨
+        #self.Del_Domain_URL = 'https://dnsapi.cn/Domain.Remove'            #åˆ é™¤åŸŸå
+        #self.Del_Record_URL = 'https://dnsapi.cn/Record.Remove'            #åˆ é™¤è®°å½•
+        #self.Get_Domain_List_URL = 'https://dnsapi.cn/Domain.List'         #è·å–åŸŸååˆ—è¡¨
         self.mat = "{:20}\t{:20}\t{:40}\t{:30}"
 
-        self.B79_supermaket_record = {'slot':'slotweb.mktcname.com','@':'yyweb.mktcname.com','www':'yyweb.mktcname.com','m':'b79_mobile.mktcname.com','999':'b79gi.cdnp4.com','vip':'b79_vipweb.mktcname.com','vipm':'b79_vipmobile.mktcname.com'}
-        self.B79_product_record = {'slot':'slotweb.cdnspod.com.','@':'218.253.216.145','www':'218.253.216.145','m':'b79_mobile.cdnspod.com.','999':'b79gi.cdnspod.com.','vip':'b79_vipweb.cdnspod.com','vipm':'b79_vipmobile.cdnspod.com'}
-        self.E03_record = {'@':'e03web.cdnv7.com','www':'e03web.cdnv7.com','999':'e03gi.cdnp4.com','m':'e03_mobile.cdnv7.com'}
-        self.E04_record = {'999':'e04gi.cdnp4.com','@':'e04web.cdnv8.com','www':'e04web.cdnv8.com','m':'e04_mobile.cdnv8.com'}
+        self.B79_supermaket_record = {'@':'your record','www':'your record','m':'your record'}
+        self.B79_product_record = {'@':'your record5','www':'your record','m':'your record'}
+        self.E03_record = {'@':'your record','www':'your record','m':'your record'}
+        self.E04_record = {'@':'your record','www':'your record','m':'your record'}
 
 
 class Dns_Supermaket_Operating(Global_Var):
-    '''Ìí¼ÓÓòÃû»ò½âÎö'''
+    '''æ·»åŠ åŸŸåæˆ–è§£æ'''
     def Add_Domain(self,Domains_List):
-        '''Ìí¼ÓÓòÃû'''
+        '''æ·»åŠ åŸŸå'''
         pass
 #        for Domain in Domains_List:
 #            r = requests.post(self.Add_Domain_URL, data={'login_token': self.Login_Token,
@@ -48,17 +48,17 @@ class Dns_Supermaket_Operating(Global_Var):
 #                                                         })
 #            response_record_json = r.json()
 #            if response_record_json["status"]["code"] == "1":
-#                #´òÓ¡ĞÅÏ¢²¢Ğ´ÈëÈÕÖ¾
-#                print('ÓòÃû£º\033[32m{}\033[0m Ìí¼Ó³É¹¦£»ÓòÃûID£º\033[32m{}\033[0m'.format(response_record_json["domain"]["domain"], response_record_json["domain"]["id"])
-#                mylogger.info('±¾´Î²Ù×÷ÈË£º--- £»ÓòÃû£º{} Ìí¼Ó³É¹¦£»ÓòÃûID£º{}'.format(response_record_json["domain"]["domain"], response_record_json["domain"]["id"]))
+#                #æ‰“å°ä¿¡æ¯å¹¶å†™å…¥æ—¥å¿—
+#                print('åŸŸåï¼š\033[32m{}\033[0m æ·»åŠ æˆåŠŸï¼›åŸŸåIDï¼š\033[32m{}\033[0m'.format(response_record_json["domain"]["domain"], response_record_json["domain"]["id"])
+#                mylogger.info('æœ¬æ¬¡æ“ä½œäººï¼š--- ï¼›åŸŸåï¼š{} æ·»åŠ æˆåŠŸï¼›åŸŸåIDï¼š{}'.format(response_record_json["domain"]["domain"], response_record_json["domain"]["id"]))
 #
 #            else:
-#                print('ÓòÃû£º\033[31m{}\033[0m Ìí¼ÓÊ§°Ü,´íÎóĞÅÏ¢£º\033[31m{}\033[0m'.format(Domain, response_record_json["status"]["message"]))
-#                mylogger.error('±¾´Î²Ù×÷ÈË£º--- £»ÓòÃû£º{} Ìí¼ÓÊ§°Ü,´íÎóĞÅÏ¢£º{}'.format(Domain, response_record_json["status"]["message"]))
+#                print('åŸŸåï¼š\033[31m{}\033[0m æ·»åŠ å¤±è´¥,é”™è¯¯ä¿¡æ¯ï¼š\033[31m{}\033[0m'.format(Domain, response_record_json["status"]["message"]))
+#                mylogger.error('æœ¬æ¬¡æ“ä½œäººï¼š--- ï¼›åŸŸåï¼š{} æ·»åŠ å¤±è´¥,é”™è¯¯ä¿¡æ¯ï¼š{}'.format(Domain, response_record_json["status"]["message"]))
 
 
     def Add_Record(self,select,Domains_List,Record_Type,Record_Line,Domain_Status):
-        '''Ìí¼Ó½âÎö'''
+        '''æ·»åŠ è§£æ'''
         if select == 'b79_s':
             for Domain in Domains_List:
                 for Sub_Domain in self.B79_product_record.keys():
@@ -74,10 +74,10 @@ class Dns_Supermaket_Operating(Global_Var):
                                                                  })
                     response_record_json = r.json()
                     if response_record_json["status"]["code"] == "1":
-                        print('ÓòÃû£º\033[32m{}\033[0m Ìí¼Ó¼ÇÂ¼£º\033[32m{}\033[0m ³É¹¦'.format(Domain, response_record_json["record"]["name"]))
-                        mylogger.info('±¾´Î²Ù×÷ÈË£º--- £»ÓòÃû£º{} Ìí¼Ó¼ÇÂ¼ {} ³É¹¦'.format(Domain, response_record_json["record"]["name"]))
+                        print('åŸŸåï¼š\033[32m{}\033[0m æ·»åŠ è®°å½•ï¼š\033[32m{}\033[0m æˆåŠŸ'.format(Domain, response_record_json["record"]["name"]))
+                        mylogger.info('æœ¬æ¬¡æ“ä½œäººï¼š--- ï¼›åŸŸåï¼š{} æ·»åŠ è®°å½• {} æˆåŠŸ'.format(Domain, response_record_json["record"]["name"]))
                     else:
-                        print('ÓòÃû£º\033[31m{}\033[0m Ìí¼Ó¼ÇÂ¼£º\033[31m{}\033[0m Ê§°Ü£¬´íÎóĞÅÏ¢£º\033[31m{}\033[0m'.format(Domain, Sub_Domain,response_record_json["status"]["message"]))
+                        print('åŸŸåï¼š\033[31m{}\033[0m æ·»åŠ è®°å½•ï¼š\033[31m{}\033[0m å¤±è´¥ï¼Œé”™è¯¯ä¿¡æ¯ï¼š\033[31m{}\033[0m'.format(Domain, Sub_Domain,response_record_json["status"]["message"]))
         elif select == 'b79_p':
             for Domain in Domains_List:
                 for Sub_Domain in self.B79_product_record.keys():
@@ -93,10 +93,10 @@ class Dns_Supermaket_Operating(Global_Var):
                                                                  })
                     response_record_json = r.json()
                     if response_record_json["status"]["code"] == "1":
-                        print('ÓòÃû£º\033[32m{}\033[0m Ìí¼Ó¼ÇÂ¼£º\033[32m{}\033[0m ³É¹¦'.format(Domain, response_record_json["record"]["name"]))
-                        mylogger.info('±¾´Î²Ù×÷ÈË£º--- £»ÓòÃû£º{} Ìí¼Ó¼ÇÂ¼ {} ³É¹¦'.format(Domain, response_record_json["record"]["name"]))
+                        print('åŸŸåï¼š\033[32m{}\033[0m æ·»åŠ è®°å½•ï¼š\033[32m{}\033[0m æˆåŠŸ'.format(Domain, response_record_json["record"]["name"]))
+                        mylogger.info('æœ¬æ¬¡æ“ä½œäººï¼š--- ï¼›åŸŸåï¼š{} æ·»åŠ è®°å½• {} æˆåŠŸ'.format(Domain, response_record_json["record"]["name"]))
                     else:
-                        print('ÓòÃû£º\033[31m{}\033[0m Ìí¼Ó¼ÇÂ¼£º\033[31m{}\033[0m Ê§°Ü£¬´íÎóĞÅÏ¢£º\033[31m{}\033[0m'.format(Domain, Sub_Domain,response_record_json["status"]["message"]))
+                        print('åŸŸåï¼š\033[31m{}\033[0m æ·»åŠ è®°å½•ï¼š\033[31m{}\033[0m å¤±è´¥ï¼Œé”™è¯¯ä¿¡æ¯ï¼š\033[31m{}\033[0m'.format(Domain, Sub_Domain,response_record_json["status"]["message"]))
         elif select == 'e03':
             for Domain in Domains_List:
                 for Sub_Domain in self.E03_record.keys():
@@ -112,11 +112,11 @@ class Dns_Supermaket_Operating(Global_Var):
                                                                  })
                     response_record_json = r.json()
                     if response_record_json["status"]["code"] == "1":
-                        print('ÓòÃû£º\033[32m{}\033[0m Ìí¼Ó¼ÇÂ¼£º\033[32m{}\033[0m ³É¹¦'.format(Domain, response_record_json["record"]["name"]))
-                        mylogger.info('±¾´Î²Ù×÷ÈË£º--- £»ÓòÃû£º{} Ìí¼Ó¼ÇÂ¼ {} ³É¹¦'.format(Domain, response_record_json["record"]["name"]))
+                        print('åŸŸåï¼š\033[32m{}\033[0m æ·»åŠ è®°å½•ï¼š\033[32m{}\033[0m æˆåŠŸ'.format(Domain, response_record_json["record"]["name"]))
+                        mylogger.info('æœ¬æ¬¡æ“ä½œäººï¼š--- ï¼›åŸŸåï¼š{} æ·»åŠ è®°å½• {} æˆåŠŸ'.format(Domain, response_record_json["record"]["name"]))
                     else:
-                        print('ÓòÃû£º\033[31m{}\033[0m Ìí¼Ó¼ÇÂ¼£º\033[31m{}\033[0m Ê§°Ü£¬´íÎóĞÅÏ¢£º\033[31m{}\033[0m'.format(Domain, Sub_Domain,response_record_json["status"]["message"]))
-                        mylogger.info('±¾´Î²Ù×÷ÈË£º--- £»ÓòÃû£º{} Ìí¼Ó¼ÇÂ¼ {} Ê§°Ü,´íÎóĞÅÏ¢£º{}'.format(Domain, Sub_Domain,response_record_json["status"]["message"]))
+                        print('åŸŸåï¼š\033[31m{}\033[0m æ·»åŠ è®°å½•ï¼š\033[31m{}\033[0m å¤±è´¥ï¼Œé”™è¯¯ä¿¡æ¯ï¼š\033[31m{}\033[0m'.format(Domain, Sub_Domain,response_record_json["status"]["message"]))
+                        mylogger.info('æœ¬æ¬¡æ“ä½œäººï¼š--- ï¼›åŸŸåï¼š{} æ·»åŠ è®°å½• {} å¤±è´¥,é”™è¯¯ä¿¡æ¯ï¼š{}'.format(Domain, Sub_Domain,response_record_json["status"]["message"]))
         elif select == 'e04':
             for Domain in Domains_List:
                 for Sub_Domain in self.E04_record.keys():
@@ -132,7 +132,7 @@ class Dns_Supermaket_Operating(Global_Var):
                                                                  })
                     response_record_json = r.json()
                     if response_record_json["status"]["code"] == "1":
-                        print('ÓòÃû£º\033[32m{}\033[0m Ìí¼Ó¼ÇÂ¼£º\033[32m{}\033[0m ³É¹¦'.format(Domain, response_record_json["record"]["name"]))
-                        mylogger.info('±¾´Î²Ù×÷ÈË£º--- £»ÓòÃû£º{} Ìí¼Ó¼ÇÂ¼ {} ³É¹¦'.format(Domain, response_record_json["record"]["name"]))
+                        print('åŸŸåï¼š\033[32m{}\033[0m æ·»åŠ è®°å½•ï¼š\033[32m{}\033[0m æˆåŠŸ'.format(Domain, response_record_json["record"]["name"]))
+                        mylogger.info('æœ¬æ¬¡æ“ä½œäººï¼š--- ï¼›åŸŸåï¼š{} æ·»åŠ è®°å½• {} æˆåŠŸ'.format(Domain, response_record_json["record"]["name"]))
                     else:
-                        print('ÓòÃû£º\033[31m{}\033[0m Ìí¼Ó¼ÇÂ¼£º\033[31m{}\033[0m Ê§°Ü£¬´íÎóĞÅÏ¢£º\033[31m{}\033[0m'.format(Domain, Sub_Domain,response_record_json["status"]["message"]))
+                        print('åŸŸåï¼š\033[31m{}\033[0m æ·»åŠ è®°å½•ï¼š\033[31m{}\033[0m å¤±è´¥ï¼Œé”™è¯¯ä¿¡æ¯ï¼š\033[31m{}\033[0m'.format(Domain, Sub_Domain,response_record_json["status"]["message"]))
