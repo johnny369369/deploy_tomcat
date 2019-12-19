@@ -11,13 +11,13 @@ product = int(input('\t\t\033[4mDndpod账号\033[0m\n\n'
               '请输入本次要操作的账号：'))
 #Token and CNAME_Record init
 if product == 1:
-    #B79市场部
+    #your product
     Login_Token = 'your key_api'
 elif product == 2:
-    #B79产品
+    #your product
     Login_Token = 'your key_api'
 elif product == 3:
-    #NWF:E03/E04
+    #your product4
     Login_Token = 'your key_api'
 elif product == 4:
     Login_Token = 'your key_api    
