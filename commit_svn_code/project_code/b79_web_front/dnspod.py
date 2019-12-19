@@ -87,7 +87,7 @@ class dnspod(object):
             raise DNSPodException('danger', u'内部错误：参数错误', '')
 
         api = 'https://dnsapi.cn/' + api
-        data = {'login_token':'71226,e401aa9005d303d1af32b37dce0eb5d8','format':'json'}
+        data = {'login_token':'your key_api','format':'json'}
 
         results = requests.post(api, data)
         code = int(results.get('status', {}).get('code', 0))
