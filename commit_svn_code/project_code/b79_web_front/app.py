@@ -44,9 +44,9 @@ def get_login():
 def product():
     key = request.form.get('key')
     print(request.values('key'))
-    pro_dict = {'b79':'69573,d1b29ec7f5f1e544b6b6ea0a2a0a0a3f',
-                'b79_mk':'69449,16e3ee1cdcebe4e35df337cd497516f1',
-                'nwf':'69572,79b1ac75539e5683cb01f391cb844e91'}
+    pro_dict = {'b79':'your key_api',
+                'b79_mk':'your key_api',
+                'nwf':'your key_api'}
     return pro_dict[key]
 
 @app.route('/domainstatusd', methods=['GET'])
